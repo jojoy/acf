@@ -1,0 +1,19 @@
+<?php if(get_field('pages')):?>
+    	<?php $i =1;?>
+    <div class="one-third column">
+	<?php while(has_sub_field('pages')):?>
+        <div class="main-boxes">
+            <a href="<?php the_sub_field('link_to_image')?>">
+                <img src="<?php the_sub_field('main_image')?>" alt="">
+                <img src="<?php the_sub_field('hover_image')?>" class="box-hover" alt="">
+            </a>
+        </div>
+    <?php if($i%2==0){?>
+    </div>
+    <div class="one-third column">
+    <?php } ?>
+    <?php $i++; endwhile;?>    
+        
+    </div>
+
+<?php endif; ?>
